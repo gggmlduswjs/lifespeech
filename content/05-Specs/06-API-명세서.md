@@ -161,4 +161,50 @@
 
 ---
 
+### 2.9 전자계약
+
+| Method | Endpoint | 설명 |
+|--------|----------|------|
+| POST | /contracts/send | 모두싸인 템플릿 기반 서명 요청 발송 |
+| GET | /contracts | 전자계약 발송 현황 목록 |
+| POST | /webhooks/modusign | 모두싸인 Webhook 수신 (서명 완료 → contract_signed_at 업데이트) |
+
+---
+
+### 2.10 상담
+
+| Method | Endpoint | 설명 |
+|--------|----------|------|
+| GET | /counselings | 상담 기록 목록 (member_id 필터) |
+| POST | /counselings | 상담 기록 생성 (일반/양도/환불) |
+
+---
+
+### 2.11 반 관리
+
+| Method | Endpoint | 설명 |
+|--------|----------|------|
+| GET | /classes | 반 목록 (type 필터: group, 1to1, director) |
+| POST | /classes | 반 생성 |
+| PATCH | /classes/:id | 반 수정 |
+
+---
+
+### 2.12 수강 등록
+
+| Method | Endpoint | 설명 |
+|--------|----------|------|
+| GET | /enrollments | 수강 등록 목록 (member_id, class_id 필터) |
+| POST | /enrollments | 수강 등록 (→ attendances 자동 생성) |
+
+---
+
+### 2.13 평가
+
+| Method | Endpoint | 설명 |
+|--------|----------|------|
+| POST | /evaluations | 평가 저장 (10항목 1~5점) |
+
+---
+
 *[[07-DB-설계]] 참고. 인증: Bearer Token (JWT)*
