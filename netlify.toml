@@ -1,0 +1,8 @@
+[build]
+  command = "npx quartz build"
+  publish = "public"
+
+[[redirects]]
+  from = "/screenshots/*"
+  to = "/05-Specs/screenshots/:splat"
+  status = 200
